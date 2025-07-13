@@ -19,7 +19,7 @@ jobs:
 
     - name: Install dependencies
       run: npm install
-    #Install prom-client
+ 
     - name: Install prom-client
       run: npm install prom-client
       
