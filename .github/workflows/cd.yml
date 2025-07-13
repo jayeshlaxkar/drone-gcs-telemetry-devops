@@ -1,13 +1,8 @@
 
 name: CD
 
-# on:
-#   workflow_dispatch:
-
 on:
-  push:
-    branches:
-      - developement_v1
+  workflow_dispatch:
 
 jobs:
   deploy:
