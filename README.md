@@ -19,7 +19,8 @@ docker-compose up --build
 [Drone] => [API Service] => [MongoDB]
                         => [Prometheus + Grafana]
 
-<img width="906" height="613" alt="image" src="https://github.com/user-attachments/assets/d996553e-8f1e-4a78-902e-ed84491873f1" />
+<img width="1776" height="1948" alt="image" src="https://github.com/user-attachments/assets/c8e13029-46d2-42f6-8972-8eca86edc349" />
+
 
 
             
