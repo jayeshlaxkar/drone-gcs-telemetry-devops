@@ -1,8 +1,13 @@
 
 name: CD
 
+# on:
+#   workflow_dispatch:
+
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - developement_v1
 
 jobs:
   deploy:
@@ -13,4 +18,4 @@ jobs:
 
     - name: Deploy app using docker-compose
       run: docker-compose up -d --build
-      
+    
