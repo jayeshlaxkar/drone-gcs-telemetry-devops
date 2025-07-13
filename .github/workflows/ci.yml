@@ -1,0 +1,36 @@
+
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Node
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+
+    - name: Install dependencies
+      run: npm install
+    #Install prom-client
+    - name: Install prom-client
+      run: npm install prom-client
+      
+    - name: Lint code
+      run: echo "Simulated lint pass"
+
+    - name: Run tests
+      run: node app/test.js
+
+    - name: Build Docker image
+      run: docker build -t drone-gcs .
+
+    - name: Push to DockerHub
+      run: echo "Simulated push"

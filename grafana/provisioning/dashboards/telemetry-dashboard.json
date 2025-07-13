@@ -1,0 +1,37 @@
+
+{
+  "dashboard": {
+    "id": null,
+    "title": "Telemetry Dashboard",
+    "tags": ["telemetry"],
+    "timezone": "browser",
+    "panels": [
+      {
+        "type": "graph",
+        "title": "API Request Count",
+        "targets": [
+          {
+            "expr": "http_requests_total",
+            "legendFormat": "requests",
+            "refId": "A"
+          }
+        ],
+        "gridPos": { "x": 0, "y": 0, "w": 24, "h": 9 }
+      },
+      {
+        "type": "graph",
+        "title": "Response Time (ms)",
+        "targets": [
+          {
+            "expr": "http_response_time_seconds",
+            "legendFormat": "response time",
+            "refId": "B"
+          }
+        ],
+        "gridPos": { "x": 0, "y": 9, "w": 24, "h": 9 }
+      }
+    ],
+    "schemaVersion": 16,
+    "version": 0
+  }
+}
